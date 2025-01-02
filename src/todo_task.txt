@@ -1,0 +1,1 @@
+・torch.einsum("nhql,nhkl->nhqk", queries, keys)についての深掘り

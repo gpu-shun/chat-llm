@@ -34,6 +34,8 @@ class MultiHeadAttention(nn.Module):
         key = self.project_key(key)
         value = self.project_value(value)
 
+        # マルチヘッドに分割する
+        # transposeは指定した次元を入れ替える
         queries = query.view(num_batch, seq_length, self.num_heads, self.head_dim).transpose(1, 2)
         keys = key.view(num_batch, seq_length, self.num_heads, self.head_dim).transpose(1, 2)
         values = value.view(num_batch, seq_length, self.num_heads, self.head_dim).transpose(1, 2)
