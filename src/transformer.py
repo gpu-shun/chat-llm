@@ -8,7 +8,7 @@ class TransformerBlock(nn.Module):
         super(TransformerBlock, self).__init__()
 
         # Masked Multi-Head Attention
-        self.attention = MultiHeadAttention(embed_dim=embed_size, num_heads=num_heads)
+        self.attention = MultiHeadAttention(embed_size=embed_size, num_heads=num_heads)
 
         self.norm1 = nn.LayerNorm(embed_size)
         self.norm2 = nn.LayerNorm(embed_size)
