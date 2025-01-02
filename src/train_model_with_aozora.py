@@ -1,6 +1,3 @@
-import chardet
-import os
-
 from transformers import AutoTokenizer
 import torch
 import torch.nn as nn
